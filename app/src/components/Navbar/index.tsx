@@ -7,14 +7,14 @@ const navigation = [
   {name: "Tech", href:"#", current:false},
   {name: "Contact", href:"#", current:false}
 ]
-
+const url = '#';
 const Navbar = () => {
   return (
-    <nav className='flex justify-between px-36 py-12 items-center bg-black'>
-      <img src={logo} alt=''></img>
+    <nav className='fixed w-full flex justify-between px-36 py-12 items-center bg-black'>
+      <a href={url}><img src={logo} alt=''></img></a>
       <ul className='flex gap-x-12'>
-        {navigation.map((item) => (
-          <li className='text-2xl text-white'>
+        {navigation.map((item,index) => (
+          <li key={index} className='text-2xl text-white'>
             <a  href={item.href}>{item.name}</a>
            </li>
         )) }        
