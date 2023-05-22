@@ -5,7 +5,6 @@ import HeroBanner from './components/HeroBanner';
 import Projects from './components/Projects';
 import Technologies from './components/Technologies';
 import Contact from './components/Contact';
-import Footer from './components/Footer';
 
 
 function App() {
@@ -32,7 +31,6 @@ function App() {
         <Projects/>
         <Technologies/>
         <Contact/>
-        <Footer/>
       </main>
     </div>
   );

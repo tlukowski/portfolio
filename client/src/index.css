@@ -72,3 +72,6 @@ code {
   top: 0;
   z-index: 5;
 }
+.swiper .swiper-slide {
+  height: auto;
+}

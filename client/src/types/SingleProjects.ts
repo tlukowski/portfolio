@@ -4,4 +4,5 @@ export interface SingleTypesProject {
     desc:string,
     link:string,
     imageUrl: string,
+    logo: string | undefined,
  }
