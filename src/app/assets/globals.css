@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'DeathStar';
+  src: url(../assets/DeathStar/DeathStar.otf);
+  font-style: normal;
+}
+@font-face {
+  font-family: 'DeathStarOutlines';
+  src: url(../assets/DeathStar/DeathStarOutlines.otf);
+  font-style: normal;
+}
+@font-face {
+  font-family: 'FlatBread';
+  src: url(../assets/FlatBread/FlatBreadOutline.ttf);
+  font-style: medium;
+}
+@font-face {
+  font-family: 'BebasNeue';
+  src: url(../assets/BebasNeue/BebasNeue-Regular.ttf);
+  font-style: medium;
+}
+h1,h2,h3{
+  font-family: DeathStarOutlines, sans-serif;
+}
+.outline-shadow{
+  /* -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #CEB7FF; */
+  font-size: 50px; 
+  letter-spacing: 0.06em;  
+  color:transparent;
+  position:relative;
+  background-clip: text;
+  background-color: #CEB7FF;
+}
+
+.border-shadow{
+  stroke-width: 1px;
+  stroke: #CEB7FF;
+  filter: drop-shadow(0px 0px 4px #CEB7FF); 
+}
+textarea {
+    resize: none;
+}
+textarea:focus-visible,
+input:focus-visible{
+  border:0;
+  outline:0;
+}

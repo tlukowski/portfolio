@@ -1,0 +1,15 @@
+import Image from "next/image";
+import React from "react";
+Image;
+export const Earth = ({ rotateNumber }: { rotateNumber: number }) => {
+  return (
+    <Image
+      src="/eart.svg"
+      layout="fill"
+      quality={100}
+      alt="background"
+      style={{ rotate: `${rotateNumber}deg` }}
+      className="!-bottom-[56%] !top-auto transition-all duration-1000"
+    />
+  );
+};
