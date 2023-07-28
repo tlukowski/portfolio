@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .animation-delay-250 {
+    animation-delay: 0.25s;
+  }  
+}
 @font-face {
   font-family: 'DeathStar';
   src: url(../assets/DeathStar/DeathStar.otf);
@@ -26,9 +31,7 @@ h1,h2,h3{
   font-family: DeathStarOutlines, sans-serif;
 }
 .outline-shadow{
-  /* -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #CEB7FF; */
-  font-size: 50px; 
+  font-size: 3.125rem;
   letter-spacing: 0.06em;  
   color:transparent;
   position:relative;
