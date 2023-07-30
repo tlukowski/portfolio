@@ -11,6 +11,9 @@ module.exports = {
         primary: "#CEB7FF",
         shadow: "#B377FF",
       },
+      backgroundImage: {
+        specialButton: "url('./image/bgButton.svg')",
+      },
     },
   },
   plugins: [],

@@ -7,7 +7,7 @@ import { Earth } from "./components/earth";
 import { PageLayout } from "./components/layout/PageLayout";
 import { PageRouter } from "./components/PageRouter";
 import Link from "next/link";
-
+import Modal from "./components/modal/Modal";
 export default function Home() {
   // Get current Index of page, there are 4 components to switch page
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -34,8 +34,18 @@ export default function Home() {
           <PageLayout>
             <PageRouter currentPage={currentIndex} />
           </PageLayout>
-          <div className="max-w-6xl">
-            <Earth rotateNumber={currentRotate} />
+          <div className="flex flex-col justify-center items-center">
+            <div className="max-w-6xl">
+              <Earth rotateNumber={currentRotate} />
+            </div>
+          </div>
+          <div className="absolute z-10 right-12 bottom-8">
+            <Image
+              alt="scroll"
+              width={90}
+              height={126}
+              src={"./scroll.svg"}
+            ></Image>
           </div>
         </div>
       </div>
