@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 export const Social = () => {
   return (
-    <div className="flex gap-12 justify-center items-center w-full mt-auto pt-12">
+    <div className="flex gap-12 justify-center items-center w-full mt-auto pt-16">
       <Link href={"https://github.com/tlukowski"} target="blank">
         <svg
           xmlns="http://www.w3.org/2000/svg"

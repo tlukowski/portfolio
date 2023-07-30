@@ -14,6 +14,7 @@ export const ContactForm = () => {
           initial={{ opacity: 0 }}
           transition={{ delay: 0.5, type: "ease" }}
           animate={{ opacity: 1 }}
+          className="mt-16 md:mt-24"
           exit={{ opacity: 0, transition: { duration: 0.75 } }}
         >
           <FormikContact setIsSubmitted={setIsSubmitted}></FormikContact>

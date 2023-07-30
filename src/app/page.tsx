@@ -28,7 +28,7 @@ export default function Home() {
           <SliderArrows
             onCurrentComponentChange={handleCurrentComponentChange}
           />
-          <div className="absolute -z-10 h-full w-full before:absolute before:left-0 before:right-0 before:top-0 before:z-10 before:h-full before:w-full before:bg-black before:opacity-90">
+          <div className="absolute -z-10 h-full w-full before:absolute before:left-0 before:right-0 before:top-0 before:z-10 before:h-full before:w-full before:bg-black before:opacity-40">
             <Background currentPage={currentIndex} />
           </div>
           <PageLayout>
