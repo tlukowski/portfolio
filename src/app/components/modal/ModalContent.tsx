@@ -1,18 +1,24 @@
-import React from "react";
-
-const ModalContent = () => {
+import React from 'react';
+import parse from 'html-react-parser';
+import { motion } from 'framer-motion';
+interface ModalContentProps {
+  content: string;
+}
+const ModalContent: React.FC<ModalContentProps> = ({ content }) => {
+  const html = parse(content);
   return (
-    <div className="border-[3px] border-primary bg-black bg-opacity-30 py-20 px-14 text-white text-2xl">
-      <p>
-        I can proudly share that I have 4 years of practical experience in the
-        Frontend Development industry, during which I had the pleasure of
-        collaborating with diverse clients and teams.
-      </p>
-      <p className="mt-4">
-        My area of expertise includes HTML, CSS, JavaScript, and React. I am
-        also proficient in building website for Wordpress and Prestashop CMS.
-      </p>
-    </div>
+    <motion.div
+      className="w-full"
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        duration: 0.5,
+      }}
+    >
+      <div className="box-shadow-custom w-full border-[3px] border-primary bg-black bg-opacity-60 px-14 py-20 text-center text-2xl text-white ">
+        {html}
+      </div>
+    </motion.div>
   );
 };
 

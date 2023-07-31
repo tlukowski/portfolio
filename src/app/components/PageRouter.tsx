@@ -1,10 +1,10 @@
-"use client";
-import { JSX, SetStateAction, useState } from "react";
-import { Skills } from "./skills";
-import { Projects } from "./projects";
-import { Work } from "./work";
-import { HomePage } from "./homePage";
-import { CurrentPageProps } from "../types/CurrentPageProps";
+'use client';
+import { JSX, SetStateAction, useState } from 'react';
+import { Skills } from './skills';
+import { Projects } from './projects';
+import { Work } from './work';
+import { HomePage } from './homePage';
+import { CurrentPageProps } from '../types/CurrentPageProps';
 
 export const PageRouter = ({ currentPage }: CurrentPageProps) => {
   switch (currentPage) {
