@@ -47,7 +47,7 @@ export const Projects = () => {
       <motion.div
         initial={{ opacity: 0 }}
         transition={{ delay: 0.75, type: 'ease' }}
-        whileInView={{ opacity: 1 }}
+        animate={{ opacity: 1 }}
       >
         <Image
           src="/projects-text.svg"

@@ -1,8 +1,8 @@
-import React from "react";
-import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
-import { ThanksYouPage } from "./ThanksYouPage";
-import { FormikContact } from "./FormikContact";
+import React from 'react';
+import Image from 'next/image';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ThanksYouPage } from './ThanksYouPage';
+import { FormikContact } from './FormikContact';
 
 export const ContactForm = () => {
   const [isSubmitted, setIsSubmitted] = React.useState(false);
@@ -12,9 +12,9 @@ export const ContactForm = () => {
         <motion.div
           key="contactForm"
           initial={{ opacity: 0 }}
-          transition={{ delay: 0.5, type: "ease" }}
+          transition={{ delay: 0.5, type: 'ease' }}
           animate={{ opacity: 1 }}
-          className="mt-16 md:mt-24"
+          className="mt-8 md:mt-24"
           exit={{ opacity: 0, transition: { duration: 0.75 } }}
         >
           <FormikContact setIsSubmitted={setIsSubmitted}></FormikContact>

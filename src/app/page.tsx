@@ -21,17 +21,17 @@ export default function Home() {
 
   return (
     <>
-      <main className="flex h-screen min-h-[1200px] max-h-screen flex-col items-center justify-between overflow-hidden">
+      <main className="flex min-h-screen flex-col items-center justify-between lg:h-screen lg:max-h-screen lg:min-h-[1200px] lg:overflow-hidden">
         <div className="z-10 w-full items-center justify-between font-mono text-sm lg:flex">
           <motion.div
             initial={{ opacity: 0 }}
             transition={{ delay: 2, type: 'ease' }}
-            whileInView={{ opacity: 1 }}
-            className="absolute top-8 right-12 text-3xl text-white uppercase font-bold z-30"
+            animate={{ opacity: 1 }}
+            className="absolute right-12 top-8 z-30 text-3xl font-bold uppercase text-white"
           >
             <Link href="/contact">Contact me</Link>
           </motion.div>
-          <div className="h-screen min-h-[1200px] relative w-full">
+          <div className="relative w-full lg:h-screen lg:min-h-[1200px]">
             <SliderArrows
               onCurrentComponentChange={handleCurrentComponentChange}
             />
@@ -41,7 +41,7 @@ export default function Home() {
             <PageLayout>
               <PageRouter currentPage={currentIndex} />
             </PageLayout>
-            <div className="flex flex-col justify-center items-center">
+            <div className="hidden flex-col items-center justify-center lg:flex">
               <div className="max-w-6xl">
                 <Earth rotateNumber={currentRotate} />
               </div>

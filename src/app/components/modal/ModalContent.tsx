@@ -15,7 +15,7 @@ const ModalContent: React.FC<ModalContentProps> = ({ content }) => {
         duration: 0.5,
       }}
     >
-      <div className="box-shadow-custom w-full border-[3px] border-primary bg-black bg-opacity-60 px-14 py-20 text-center text-2xl text-white ">
+      <div className="box-shadow-custom w-full border-[3px] border-primary bg-black bg-opacity-60 px-2 py-4 text-center text-white lg:px-14 lg:py-20 lg:text-2xl ">
         {html}
       </div>
     </motion.div>

@@ -8,7 +8,7 @@ export const HomePage = () => {
       <motion.div
         initial={{ opacity: 0 }}
         transition={{ delay: 0.25, type: 'ease' }}
-        whileInView={{ opacity: 1 }}
+        animate={{ opacity: 1 }}
         className="flex flex-col items-center justify-center"
       >
         <Image
@@ -23,7 +23,7 @@ export const HomePage = () => {
       <motion.div
         initial={{ opacity: 0 }}
         transition={{ delay: 0.75, type: 'ease' }}
-        whileInView={{ opacity: 1 }}
+        animate={{ opacity: 1 }}
         className="flex flex-col items-center justify-center"
       >
         <div className="mt-16">

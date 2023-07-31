@@ -60,6 +60,7 @@ input:focus-visible{
   --swiper-pagination-color: #B377FF;
   --swiper-pagination-bullet-width:1.25rem;
   --swiper-pagination-bullet-height:1.25rem;
+  --swiper-pagination-bullet-inactive-color:white;
   --swiper-pagination-bullet-inactive-opacity:1;
 }
 .swiper-wrapper{

@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
 const ModalButton = ({ openModal }: { openModal: () => void }) => {
   return (
     <button
-      className="text-4xl text-white uppercase font-[DeathStarOutlines] z-30"
+      className="z-30 font-[DeathStarOutlines] text-4xl uppercase text-white"
       onClick={openModal}
     >
       Click to open
