@@ -30,6 +30,7 @@ export const Background = ({ currentPage }: currentPageProps) => {
         {currentPage === 0 && (
           <Image
             src="/homepage.webp"
+            priority
             layout="fill"
             className="!h-[105%]"
             objectFit="cover"
@@ -41,6 +42,7 @@ export const Background = ({ currentPage }: currentPageProps) => {
           <Image
             src="/space.webp"
             layout="fill"
+            priority
             className="!h-[105%]"
             objectFit="cover"
             quality={100}
@@ -51,6 +53,7 @@ export const Background = ({ currentPage }: currentPageProps) => {
           <Image
             src="/experience.webp"
             className="!h-[110%]"
+            priority
             layout="fill"
             objectFit="cover"
             quality={100}
@@ -61,6 +64,7 @@ export const Background = ({ currentPage }: currentPageProps) => {
           <Image
             src="/skills.webp"
             className="!h-[110%]"
+            priority
             layout="fill"
             objectFit="cover"
             quality={100}
