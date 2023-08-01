@@ -11,9 +11,9 @@ export const Arrow = ({ direction, onClick }: Direction) => {
     <div className="cursor-pointer">
       <Image
         src="/arrow.svg"
-        width={50}
-        height={100}
-        quality={100}
+        width={54}
+        height={10}
+        quality={105}
         alt="arrow"
         className={direction === 'left' ? 'rotate-180' : ''}
         onClick={onClick}

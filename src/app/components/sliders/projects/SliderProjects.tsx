@@ -46,7 +46,7 @@ const SliderProjects: React.FC<SliderItemsProps> = ({ sliderItems }) => {
                 <Link
                   target="_blank"
                   href={item.href}
-                  className="text-special-shadow text-5xl text-white"
+                  className="text-special-shadow text-center text-5xl text-white"
                 >
                   {item.title}
                 </Link>

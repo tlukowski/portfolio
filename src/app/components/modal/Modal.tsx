@@ -8,7 +8,7 @@ const Modal = ({ content }: { content: string }) => {
     setIsOpen((prevIsOpen) => !prevIsOpen);
   };
   return (
-    <div className="z-30 mt-auto flex w-full justify-center">
+    <div className="z-30 mt-8 flex w-full justify-center lg:mt-auto">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -21,7 +21,7 @@ const Modal = ({ content }: { content: string }) => {
           className={`relative ${
             isOpen
               ? 'h-full w-full'
-              : 'h-44 w-64 before:absolute before:inset-0 before:h-full before:w-full before:bg-specialButton before:bg-auto before:bg-no-repeat'
+              : 'w-34 h-20 lg:h-44 lg:w-64 lg:before:absolute lg:before:inset-0 lg:before:h-full lg:before:w-full lg:before:bg-specialButton lg:before:bg-auto lg:before:bg-no-repeat'
           } flex items-center justify-center px-4 py-4`}
         >
           {isOpen ? (

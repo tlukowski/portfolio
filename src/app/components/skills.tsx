@@ -25,7 +25,7 @@ export const Skills = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.75, type: 'ease' }}
       >
-        <div className="text-special-shadow mt-16 font-[BebasNeue] text-5xl text-white">
+        <div className="text-special-shadow mt-16 text-center font-[BebasNeue] text-5xl text-white">
           Here is a list of some of my skills
         </div>
       </motion.div>

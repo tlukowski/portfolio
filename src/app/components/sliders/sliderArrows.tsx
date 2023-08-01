@@ -42,7 +42,7 @@ export const SliderArrows = ({
 
   return (
     <>
-      <div className="absolute z-20 flex h-full w-full items-center justify-between px-8">
+      <div className="md:0 absolute z-20 mt-10 flex w-full items-center justify-between px-8 lg:h-full">
         <Arrow direction={'left'} onClick={handlePrev} />
         <Arrow direction={'right'} onClick={handleNext} />
       </div>

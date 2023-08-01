@@ -26,7 +26,7 @@ export const HomePage = () => {
         animate={{ opacity: 1 }}
         className="flex flex-col items-center justify-center"
       >
-        <div className="mt-16">
+        <div className="mt-12 lg:mt-16">
           <Image src={'/logo.svg'} width={636} height={134} alt="about me" />
         </div>
       </motion.div>

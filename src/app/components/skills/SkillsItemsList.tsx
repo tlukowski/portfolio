@@ -54,7 +54,7 @@ const SkillsItemList = () => {
   return (
     <>
       <AnimatePresence>
-        <div className="mt-8 grid auto-rows-fr grid-cols-4 gap-5">
+        <div className="mt-8 grid auto-rows-fr grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4">
           {skills.map((skill, index) => (
             <motion.div
               key={index}
@@ -84,7 +84,7 @@ const SkillsItemList = () => {
         >
           Working in progress
         </motion.div>
-        <div className="mt-8 grid auto-rows-fr grid-cols-4 gap-5">
+        <div className="mt-8 grid auto-rows-fr grid-cols-1 gap-5 sm:grid-cols-3 lg:grid-cols-4">
           {learning.map((skill, index) => (
             <motion.div
               key={index}

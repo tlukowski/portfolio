@@ -20,12 +20,10 @@
 @font-face {
   font-family: 'FlatBread';
   src: url(../assets/FlatBread/FlatBreadOutline.ttf);
-  font-style: medium;
 }
 @font-face {
   font-family: 'BebasNeue';
   src: url(../assets/BebasNeue/BebasNeue-Regular.ttf);
-  font-style: medium;
 }
 h1,h2,h3{
   font-family: DeathStarOutlines, sans-serif;

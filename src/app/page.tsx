@@ -21,8 +21,26 @@ export default function Home() {
 
   return (
     <>
-      <main className="flex min-h-screen flex-col items-center justify-between lg:h-screen lg:max-h-screen lg:min-h-[1200px] lg:overflow-hidden">
-        <div className="z-10 w-full items-center justify-between font-mono text-sm lg:flex">
+      <main className="relative flex min-h-screen flex-col items-center justify-between overflow-hidden lg:h-screen lg:max-h-screen lg:min-h-[1200px]">
+        {/* <div className="relative w-full lg:h-screen lg:min-h-[1200px]"> */}
+        <SliderArrows onCurrentComponentChange={handleCurrentComponentChange} />
+        <BackgroundLayout>
+          <Background currentPage={currentIndex} />
+        </BackgroundLayout>
+        <PageLayout>
+          <PageRouter currentPage={currentIndex} />
+        </PageLayout>
+        <div className="hidden flex-col items-center justify-center lg:flex">
+          <Earth rotateNumber={currentRotate} />
+        </div>
+        {/* </div> */}
+      </main>
+    </>
+  );
+}
+
+{
+  /* <div className="z-10 w-full items-center justify-between font-mono text-sm lg:flex">
           <motion.div
             initial={{ opacity: 0 }}
             transition={{ delay: 2, type: 'ease' }}
@@ -31,25 +49,8 @@ export default function Home() {
           >
             <Link href="/contact">Contact me</Link>
           </motion.div>
-          <div className="relative w-full lg:h-screen lg:min-h-[1200px]">
-            <SliderArrows
-              onCurrentComponentChange={handleCurrentComponentChange}
-            />
-            <BackgroundLayout>
-              <Background currentPage={currentIndex} />
-            </BackgroundLayout>
-            <PageLayout>
-              <PageRouter currentPage={currentIndex} />
-            </PageLayout>
-            <div className="hidden flex-col items-center justify-center lg:flex">
-              <div className="max-w-6xl">
-                <Earth rotateNumber={currentRotate} />
-              </div>
-            </div>
-          </div>
-        </div>
-        <DesignAuthor />
-      </main>
-    </>
-  );
+        </div> */
+}
+{
+  /* <DesignAuthor /> */
 }
