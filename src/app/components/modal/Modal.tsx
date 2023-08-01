@@ -28,33 +28,9 @@ const Modal = ({ content }: { content: string }) => {
           } flex items-center justify-center px-4 py-4`}
         >
           {isOpen ? (
-            <AnimatePresence>
-              <motion.div
-                className="w-full"
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 50 }}
-                transition={{
-                  duration: 0.5,
-                }}
-              >
-                <ModalContent content={content} closeModal={closeModal} />
-              </motion.div>
-            </AnimatePresence>
+            <ModalContent content={content} closeModal={closeModal} />
           ) : (
-            <AnimatePresence>
-              <motion.div
-                className="w-full"
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 50 }}
-                transition={{
-                  duration: 0.5,
-                }}
-              >
-                <ModalButton openModal={toggleModal} />
-              </motion.div>
-            </AnimatePresence>
+            <ModalButton openModal={toggleModal} />
           )}
         </div>
       </motion.div>

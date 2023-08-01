@@ -19,6 +19,15 @@ export const SliderArrows = ({
 }: SliderArrowsProps) => {
   const [currentComponentIndex, setCurrentComponentIndex] = useState(0);
   const [currentRotate, setCurrentRotate] = useState(0);
+  const [areArrowsDisabled, setAreArrowsDisabled] = useState(false);
+
+  const disableArrows = () => {
+    setAreArrowsDisabled(true);
+    // Re-enable arrows after 2 seconds
+    setTimeout(() => {
+      setAreArrowsDisabled(false);
+    }, 1000);
+  };
 
   const handleNext = () => {
     setCurrentComponentIndex(
@@ -26,6 +35,7 @@ export const SliderArrows = ({
     );
     // Rotate Earth 90 deg
     setCurrentRotate(currentRotate + 90);
+    disableArrows();
   };
 
   const handlePrev = () => {
@@ -35,6 +45,7 @@ export const SliderArrows = ({
     );
     // Rotate Earth -90 deg
     setCurrentRotate(currentRotate - 90);
+    disableArrows();
   };
   // Update current component and rotate number and return it to parent component
   useEffect(() => {
@@ -43,10 +54,11 @@ export const SliderArrows = ({
 
   return (
     <>
-      <div className="absolute top-1/2 z-30  flex w-full items-center justify-between px-6 lg:mt-0 lg:h-full lg:px-8">
-        <Arrow direction={'left'} onClick={handlePrev} />
-        <Arrow direction={'right'} onClick={handleNext} />
-      </div>
+      {!areArrowsDisabled && (
+        <div className="fixed right-0 top-2/3 z-50 px-6 lg:absolute lg:top-1/2 lg:mt-0 lg:px-8">
+          <Arrow direction={'right'} onClick={handleNext} />
+        </div>
+      )}
     </>
   );
 };

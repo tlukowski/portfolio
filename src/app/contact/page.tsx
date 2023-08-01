@@ -11,11 +11,11 @@ export default function Contact() {
       <div className="relative h-full w-full before:absolute before:left-0 before:right-0 before:top-0 before:h-full before:w-full before:bg-black before:opacity-50">
         <Image
           src="/space.webp"
-          layout="fill"
-          objectFit="cover"
+          fill
+          priority
+          className="!h-[105%] object-cover"
           quality={100}
           alt="background"
-          className="-z-10"
         />
         <div className="relative z-20 mx-auto flex min-h-screen max-w-4xl flex-col px-6 pb-8 pt-8 md:pb-14 lg:pt-32">
           <motion.div

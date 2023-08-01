@@ -24,16 +24,21 @@ export const Arrow = ({ direction, onClick }: Direction) => {
   };
 
   return (
-    <div className="max-w-[2rem] cursor-pointer sm:max-w-max">
+    <div
+      className="infinity-right flex translate-x-2 cursor-pointer flex-col  items-center sm:max-w-max"
+      onClick={handleClick}
+    >
       <Image
-        src="/arrow.svg"
+        src="/rocket.svg"
         width={54}
-        height={10}
-        quality={105}
+        height={54}
+        quality={100}
         alt="arrow"
         className={direction === 'left' ? 'rotate-180' : ''}
-        onClick={handleClick}
       />
+      <div className="mr-2 mt-2 bg-[#FF1494] p-2 text-center text-sm uppercase text-yellow-100 lg:text-base">
+        Click to Fly
+      </div>
     </div>
   );
 };

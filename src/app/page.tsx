@@ -22,7 +22,14 @@ export default function Home() {
   return (
     <>
       <main className="relative flex min-h-screen flex-col items-center justify-between overflow-hidden lg:h-screen lg:max-h-screen lg:min-h-[1200px]">
-        {/* <div className="relative w-full lg:h-screen lg:min-h-[1200px]"> */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          transition={{ delay: 2, type: 'ease' }}
+          animate={{ opacity: 1 }}
+          className="relative top-8 z-30 text-3xl font-bold uppercase text-white lg:absolute lg:right-12"
+        >
+          <Link href="/contact">Contact me</Link>
+        </motion.div>
         <SliderArrows onCurrentComponentChange={handleCurrentComponentChange} />
         <BackgroundLayout>
           <Background currentPage={currentIndex} />
@@ -33,24 +40,8 @@ export default function Home() {
         <div className="hidden flex-col items-center justify-center lg:flex">
           <Earth rotateNumber={currentRotate} />
         </div>
-        {/* </div> */}
+        <DesignAuthor />
       </main>
     </>
   );
-}
-
-{
-  /* <div className="z-10 w-full items-center justify-between font-mono text-sm lg:flex">
-          <motion.div
-            initial={{ opacity: 0 }}
-            transition={{ delay: 2, type: 'ease' }}
-            animate={{ opacity: 1 }}
-            className="absolute right-12 top-8 z-30 text-3xl font-bold uppercase text-white"
-          >
-            <Link href="/contact">Contact me</Link>
-          </motion.div>
-        </div> */
-}
-{
-  /* <DesignAuthor /> */
 }

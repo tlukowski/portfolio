@@ -1,6 +1,6 @@
 import React from 'react';
 import parse from 'html-react-parser';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import ModalCloseButton from './ModalCloseButton';
 interface ModalContentProps {
   content: string;
@@ -9,7 +9,14 @@ interface ModalContentProps {
 const ModalContent: React.FC<ModalContentProps> = ({ content, closeModal }) => {
   const html = parse(content);
   return (
-    <>
+    <motion.div
+      className="w-full"
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        duration: 0.5,
+      }}
+    >
       <div className="box-shadow-custom w-full border-[3px] border-primary bg-black bg-opacity-60 px-4 py-8 text-center text-white lg:px-14 lg:py-20 lg:text-2xl ">
         {html}
       </div>
@@ -24,7 +31,7 @@ const ModalContent: React.FC<ModalContentProps> = ({ content, closeModal }) => {
       >
         <ModalCloseButton closeModal={closeModal}></ModalCloseButton>
       </motion.div>
-    </>
+    </motion.div>
   );
 };
 
