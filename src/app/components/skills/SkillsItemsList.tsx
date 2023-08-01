@@ -72,7 +72,7 @@ const SkillsItemList = () => {
           ))}
         </div>
       </AnimatePresence>
-      <div className="mt-20">
+      <div className="mt-8 sm:mt-20">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}

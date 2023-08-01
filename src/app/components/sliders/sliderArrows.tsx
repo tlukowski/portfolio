@@ -29,6 +29,7 @@ export const SliderArrows = ({
   };
 
   const handlePrev = () => {
+    // If current index is 0, set it to last index
     setCurrentComponentIndex(
       (prevIndex) => (prevIndex - 1 + components.length) % components.length,
     );
@@ -42,7 +43,7 @@ export const SliderArrows = ({
 
   return (
     <>
-      <div className="md:0 absolute z-20 mt-10 flex w-full items-center justify-between px-8 lg:h-full">
+      <div className="absolute top-1/2 z-30  flex w-full items-center justify-between px-6 lg:mt-0 lg:h-full lg:px-8">
         <Arrow direction={'left'} onClick={handlePrev} />
         <Arrow direction={'right'} onClick={handleNext} />
       </div>

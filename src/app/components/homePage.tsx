@@ -9,7 +9,7 @@ export const HomePage = () => {
         initial={{ opacity: 0 }}
         transition={{ delay: 0.25, type: 'ease' }}
         animate={{ opacity: 1 }}
-        className="flex flex-col items-center justify-center"
+        className="flex-col items-center justify-center lg:flex"
       >
         <Image
           src="/mainPage-text.svg"
@@ -18,6 +18,7 @@ export const HomePage = () => {
           quality={100}
           priority
           alt="background"
+          className="hidden sm:block"
         />
       </motion.div>
       <motion.div
@@ -27,7 +28,7 @@ export const HomePage = () => {
         className="flex flex-col items-center justify-center"
       >
         <div className="mt-12 lg:mt-16">
-          <Image src={'/logo.svg'} width={636} height={134} alt="about me" />
+          <Image src={'/logo.svg'} width={645} height={134} alt="about me" />
         </div>
       </motion.div>
       <Modal

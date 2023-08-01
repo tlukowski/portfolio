@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
 import ModalContent from './ModalContent';
 import ModalButton from './ModalButton';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 const Modal = ({ content }: { content: string }) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleModal = () => {
     setIsOpen((prevIsOpen) => !prevIsOpen);
   };
+  const closeModal = () => {
+    setIsOpen(false);
+  };
   return (
-    <div className="z-30 mt-8 flex w-full justify-center lg:mt-auto">
+    <div className="z-30 mt-auto flex w-full justify-center lg:mt-auto">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -25,9 +28,33 @@ const Modal = ({ content }: { content: string }) => {
           } flex items-center justify-center px-4 py-4`}
         >
           {isOpen ? (
-            <ModalContent content={content} />
+            <AnimatePresence>
+              <motion.div
+                className="w-full"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 50 }}
+                transition={{
+                  duration: 0.5,
+                }}
+              >
+                <ModalContent content={content} closeModal={closeModal} />
+              </motion.div>
+            </AnimatePresence>
           ) : (
-            <ModalButton openModal={toggleModal} />
+            <AnimatePresence>
+              <motion.div
+                className="w-full"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 50 }}
+                transition={{
+                  duration: 0.5,
+                }}
+              >
+                <ModalButton openModal={toggleModal} />
+              </motion.div>
+            </AnimatePresence>
           )}
         </div>
       </motion.div>
