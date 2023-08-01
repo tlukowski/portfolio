@@ -25,7 +25,7 @@ export const Arrow = ({ direction, onClick }: Direction) => {
 
   return (
     <div
-      className="infinity-right flex translate-x-2 cursor-pointer flex-col  items-center sm:max-w-max"
+      className="infinity-right flex  cursor-pointer flex-col items-center sm:max-w-max"
       onClick={handleClick}
     >
       <Image
@@ -36,7 +36,7 @@ export const Arrow = ({ direction, onClick }: Direction) => {
         alt="arrow"
         className={direction === 'left' ? 'rotate-180' : ''}
       />
-      <div className="mr-2 mt-2 bg-[#FF1494] p-2 text-center text-sm uppercase text-yellow-100 lg:text-base">
+      <div className="mr-2 mt-2 bg-[#FF1494] p-2 text-center text-xs uppercase text-yellow-100 lg:text-base">
         Click to Fly
       </div>
     </div>

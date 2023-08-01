@@ -1,12 +1,12 @@
-import { Formik, Field, Form } from "formik";
-import * as Yup from "yup";
-import { ErrorInputLayout } from "./ErrorInputLayout";
-import { ErrorInputPlaceholder } from "./ErrorInputPlaceholder";
+import { Formik, Field, Form } from 'formik';
+import * as Yup from 'yup';
+import { ErrorInputLayout } from './ErrorInputLayout';
+import { ErrorInputPlaceholder } from './ErrorInputPlaceholder';
 
 const ContactFormSchema = Yup.object().shape({
-  email: Yup.string().email("Invalid email").required("Required"),
-  subject: Yup.string().required("Required"),
-  message: Yup.string().required("Required"),
+  email: Yup.string().email('Invalid email').required('Required'),
+  subject: Yup.string().required('Required'),
+  message: Yup.string().required('Required'),
 });
 
 export const FormikContact = ({
@@ -19,9 +19,9 @@ export const FormikContact = ({
       <Formik
         data-netlify="true"
         initialValues={{
-          email: "",
-          subject: "",
-          message: "",
+          email: '',
+          subject: '',
+          message: '',
         }}
         validationSchema={ContactFormSchema}
         onSubmit={async (values) => {
@@ -36,11 +36,11 @@ export const FormikContact = ({
         }}
       >
         {({ errors, touched }) => (
-          <Form className="w-full flex flex-col items-center gap-4 md:gap-8">
+          <Form className="flex w-full flex-col items-center gap-4 md:gap-8">
             <div className="w-full">
-              <div className="flex w-full flex-wrap md:flex-nowrap gap-4 md:gap-0">
+              <div className="flex w-full flex-wrap gap-4 md:flex-nowrap md:gap-0">
                 <label
-                  className="text-3xl text-white w-full justify-start md:basis-1/4 mr-8 flex md:justify-end"
+                  className="mr-8 flex w-full justify-start text-xl text-white md:basis-1/4 md:justify-end lg:text-3xl"
                   htmlFor="subject"
                 >
                   SUBJECT:
@@ -48,7 +48,7 @@ export const FormikContact = ({
                 <div className="w-full md:basis-3/4">
                   <Field
                     id="subject"
-                    className="w-full bg-primary text-xl bg-opacity-30 px-5 py-3 placeholder:text-gray-400 uppercase text-white focus:bg-white transition-colors focus:text-black"
+                    className="w-full bg-primary bg-opacity-30 px-5 py-3 text-xl uppercase text-white transition-colors placeholder:text-gray-400 focus:bg-white focus:text-black"
                     name="subject"
                     type="subject"
                     placeholder="Your subject here..."
@@ -62,9 +62,9 @@ export const FormikContact = ({
               </div>
             </div>
             <div className="w-full">
-              <div className="flex w-full flex-wrap md:flex-nowrap gap-4 md:gap-0">
+              <div className="flex w-full flex-wrap gap-4 md:flex-nowrap md:gap-0">
                 <label
-                  className="text-3xl text-white w-full justify-start md:basis-1/4 mr-8 flex md:justify-end"
+                  className="mr-8 flex w-full justify-start text-xl text-white md:basis-1/4 md:justify-end lg:text-3xl"
                   htmlFor="email"
                 >
                   EMAIL:
@@ -72,7 +72,7 @@ export const FormikContact = ({
                 <div className="w-full md:basis-3/4">
                   <Field
                     id="email"
-                    className="w-full bg-primary text-xl bg-opacity-30 px-5 py-3 placeholder:text-gray-400 uppercase text-white focus:bg-white transition-colors focus:text-black"
+                    className="w-full bg-primary bg-opacity-30 px-5 py-3 text-xl uppercase text-white transition-colors placeholder:text-gray-400 focus:bg-white focus:text-black"
                     name="email"
                     type="email"
                     placeholder="yourmail@mail.com"
@@ -87,9 +87,9 @@ export const FormikContact = ({
             </div>
 
             <div className="w-full">
-              <div className="flex w-full flex-wrap md:flex-nowrap gap-4 md:gap-0">
+              <div className="flex w-full flex-wrap gap-4 md:flex-nowrap md:gap-0">
                 <label
-                  className="text-3xl text-white w-full justify-start md:basis-1/4 mr-8 flex md:justify-end"
+                  className="mr-8 flex w-full justify-start text-xl text-white md:basis-1/4 md:justify-end lg:text-3xl"
                   htmlFor="message"
                 >
                   MESSAGE:
@@ -100,7 +100,7 @@ export const FormikContact = ({
                     as="textarea"
                     rows={6}
                     placeholder="Your message here..."
-                    className="w-full bg-primary text-xl bg-opacity-30 px-5 py-3 placeholder:text-gray-400 uppercase text-white focus:bg-white transition-colors focus:text-black"
+                    className="w-full bg-primary bg-opacity-30 px-5 py-3 text-xl uppercase text-white transition-colors placeholder:text-gray-400 focus:bg-white focus:text-black"
                     name="message"
                   />
                   {errors.message && touched.message ? (
@@ -111,9 +111,9 @@ export const FormikContact = ({
                 </div>
               </div>
             </div>
-            <div className="md:mt-8 flex w-full justify-center md:justify-end">
+            <div className="flex w-full justify-center md:mt-8 md:justify-end">
               <button
-                className="bg-shadow text-white transition-colors hover:bg-purple-800  text-2xl px-8 py-4"
+                className="bg-shadow px-8 py-4 text-2xl  text-white transition-colors hover:bg-purple-800"
                 type="submit"
               >
                 Submit

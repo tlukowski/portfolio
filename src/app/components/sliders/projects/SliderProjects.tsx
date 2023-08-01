@@ -28,7 +28,7 @@ const SliderProjects: React.FC<SliderItemsProps> = ({ sliderItems }) => {
       {sliderItems.map((item) => (
         <SwiperSlide
           key={item.title} // Adding a unique key to each slide is essential when rendering lists in React
-          className="mt-16 !flex !h-auto flex-col items-center justify-center pb-16 font-[BebasNeue]"
+          className="mt-8 !flex !h-auto flex-col items-center justify-center pb-16 font-[BebasNeue] lg:mt-16"
         >
           <motion.div
             initial={{ opacity: 0 }}

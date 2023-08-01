@@ -11,7 +11,7 @@ const Modal = ({ content }: { content: string }) => {
     setIsOpen(false);
   };
   return (
-    <div className="z-30 mt-auto flex w-full justify-center lg:mt-auto">
+    <div className="z-30 mt-8 flex w-full justify-center lg:mt-auto">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

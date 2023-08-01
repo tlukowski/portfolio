@@ -1,13 +1,20 @@
 'use client';
 import Image from 'next/image';
-import { PageLayout } from '../components/layout/PageLayout';
 import { motion } from 'framer-motion';
 import { ContactForm } from '../components/contact/ContactForm';
 import { Social } from '../components/Social';
-
+import Link from 'next/link';
 export default function Contact() {
   return (
     <main className="flex max-h-screen min-h-screen flex-col items-center justify-between">
+      <motion.div
+        initial={{ opacity: 0 }}
+        transition={{ delay: 2, type: 'ease' }}
+        animate={{ opacity: 1 }}
+        className="relative top-8 z-30 text-3xl font-bold uppercase text-white lg:absolute lg:left-12"
+      >
+        <Link href="/">Back to Pages</Link>
+      </motion.div>
       <div className="relative h-full w-full before:absolute before:left-0 before:right-0 before:top-0 before:h-full before:w-full before:bg-black before:opacity-50">
         <Image
           src="/space.webp"
