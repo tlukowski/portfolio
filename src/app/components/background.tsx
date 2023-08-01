@@ -15,11 +15,11 @@ export const Background = ({ currentPage }: currentPageProps) => {
         initial={
           // Use conditional to set initial position based on currentPage
           actualCurrentPage < currentPage
-            ? { y: '100%', zIndex: 1 }
-            : { y: '-100%', zIndex: 1 }
+            ? { x: '100%', zIndex: 1 }
+            : { x: '-100%', zIndex: 1 }
         }
-        animate={{ y: '0', zIndex: 2 }}
-        exit={{ y: '100%', zIndex: 1 }}
+        animate={{ x: '0', zIndex: 2 }}
+        exit={{ x: '100%', zIndex: 1 }}
         transition={{ type: 'ease', duration: 1 }}
         style={{
           position: 'absolute',
@@ -31,7 +31,9 @@ export const Background = ({ currentPage }: currentPageProps) => {
           <Image
             src="/homepage.webp"
             priority
-            layout="fill"
+            fill
+            // width={1920}
+            // height={1080}
             className="!h-[105%]"
             objectFit="cover"
             quality={100}
@@ -41,7 +43,7 @@ export const Background = ({ currentPage }: currentPageProps) => {
         {currentPage === 1 && (
           <Image
             src="/space.webp"
-            layout="fill"
+            fill
             priority
             className="!h-[105%]"
             objectFit="cover"
@@ -54,7 +56,7 @@ export const Background = ({ currentPage }: currentPageProps) => {
             src="/experience.webp"
             className="!h-[110%]"
             priority
-            layout="fill"
+            fill
             objectFit="cover"
             quality={100}
             alt="background"
@@ -64,8 +66,7 @@ export const Background = ({ currentPage }: currentPageProps) => {
           <Image
             src="/skills.webp"
             className="!h-[110%]"
-            priority
-            layout="fill"
+            fill
             objectFit="cover"
             quality={100}
             alt="background"

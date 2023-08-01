@@ -6,7 +6,8 @@ export const Earth = ({ rotateNumber }: { rotateNumber: number }) => {
   return (
     <Image
       src="/eart.svg"
-      layout="fill"
+      fill
+      priority
       quality={100}
       alt="background"
       style={{ rotate: `${rotateNumber}deg` }}
