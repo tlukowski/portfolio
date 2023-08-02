@@ -55,9 +55,13 @@ export const SliderArrows = ({
   return (
     <>
       {!areArrowsDisabled && (
-        <div className="fixed bottom-2 left-2 z-50 lg:absolute lg:top-1/2 lg:mt-0 lg:px-8">
+        <>
+          <Arrow direction={'left'} onClick={handlePrev} />
           <Arrow direction={'right'} onClick={handleNext} />
-        </div>
+          <div className="fixed bottom-2 left-2 z-50 sm:left-0 sm:top-0 sm:z-20  sm:w-full sm:justify-between lg:mt-0 lg:px-8">
+            <Arrow direction={'rocket'} onClick={handleNext} />
+          </div>
+        </>
       )}
     </>
   );
