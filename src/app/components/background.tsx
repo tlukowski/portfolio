@@ -13,7 +13,7 @@ export const Background = ({ currentPage, currentDirection }: currentPageProps) 
 
     useEffect(() => {
       // Determine the initial and exit animations based on the direction
-      let initialY, exitY;
+      let initialY = '0%', exitY = '0%';
 
       // Use normal scroll direction if currentDirection is not an arrow click
       if (currentDirection === 'right') {
