@@ -15,16 +15,15 @@ export const Background = ({ currentPage }: currentPageProps) => {
         initial={
           // Use conditional to set initial position based on currentPage
           actualCurrentPage < currentPage
-            ? { x: '100%', zIndex: 1 }
-            : { x: '-100%', zIndex: 1 }
+            ? { y: '100%', zIndex: 1 }
+            : { y: '-100%', zIndex: 1 }
         }
-        animate={{ x: '0', zIndex: 2 }}
-        exit={{ x: '100%', zIndex: 1 }}
+        animate={{ y: '0', zIndex: 2 }}
+        exit={{ y: '100%', zIndex: 1 }}
         transition={{ type: 'ease', duration: 1 }}
         style={{
           position: 'absolute',
           inset: '0',
-          background: 'transparent',
         }}
       >
         {currentPage === 0 && (
