@@ -19,6 +19,7 @@ export const SliderArrows = ({
 }: SliderArrowsProps) => {
   const [currentComponentIndex, setCurrentComponentIndex] = useState(0);
   const [currentRotate, setCurrentRotate] = useState(0);
+  const [currentDirection, setCurrentDirection] = useState('');
   const [areArrowsDisabled, setAreArrowsDisabled] = useState(false);
 
   const disableArrows = () => {
@@ -36,6 +37,7 @@ export const SliderArrows = ({
     // Rotate Earth 90 deg
     setCurrentRotate(currentRotate + 90);
     disableArrows();
+    setCurrentDirection('right');
   };
 
   const handlePrev = () => {
@@ -46,11 +48,12 @@ export const SliderArrows = ({
     // Rotate Earth -90 deg
     setCurrentRotate(currentRotate - 90);
     disableArrows();
+    setCurrentDirection('left');
   };
   // Update current component and rotate number and return it to parent component
   useEffect(() => {
-    onCurrentComponentChange(currentComponentIndex, currentRotate);
-  }, [currentComponentIndex, onCurrentComponentChange, currentRotate]);
+    onCurrentComponentChange(currentComponentIndex, currentRotate, currentDirection);
+  }, [currentComponentIndex, onCurrentComponentChange, currentRotate, currentDirection]);
 
   return (
     <>

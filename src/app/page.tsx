@@ -14,9 +14,11 @@ export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
   // return rotate from SliderArrow component to rotate Earth
   const [currentRotate, setCurrentRotate] = useState(0);
-  const handleCurrentComponentChange = (index: number, rotate: number) => {
+  const [currentDirection, setCurrentDirection] = useState('');
+  const handleCurrentComponentChange = (index: number, rotate: number, direction: string) => {
     setCurrentIndex(index);
     setCurrentRotate(rotate);
+    setCurrentDirection(direction);
   };
 
   return (
@@ -32,7 +34,7 @@ export default function Home() {
         </motion.div>
         <SliderArrows onCurrentComponentChange={handleCurrentComponentChange} />
         <BackgroundLayout>
-          <Background currentPage={currentIndex} />
+          <Background currentPage={currentIndex} currentDirection={currentDirection} />
         </BackgroundLayout>
         <PageLayout>
           <PageRouter currentPage={currentIndex} />

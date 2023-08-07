@@ -1,3 +1,3 @@
 export type SliderArrowsProps = {
-  onCurrentComponentChange: (index: number, rotate: number) => void;
+  onCurrentComponentChange: (index: number, rotate: number, direction: string) => void;
 };
