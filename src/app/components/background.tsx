@@ -6,38 +6,18 @@ type currentPageProps = {
   currentDirection: string;
 };
 export const Background = ({ currentPage, currentDirection }: currentPageProps) => {  
-    const [animateProps, setAnimateProps] = useState({
-      initialY: '0%',
-      exitY: '0%',
-    });
-
-    useEffect(() => {
-      // Determine the initial and exit animations based on the direction
-      let initialY = '0%', exitY = '0%';
-
-      // Use normal scroll direction if currentDirection is not an arrow click
-      if (currentDirection === 'right') {
-        initialY = '100%';
-        exitY = '-100%';
-      } else if (currentDirection === 'left') {
-        initialY = '-100%';
-        exitY = '100%';
-      }
-
-      setAnimateProps({ initialY, exitY });
-    }, [currentDirection]);
-
+     
     return (
       <AnimatePresence initial={false}>
         <motion.div
           key={currentPage}
           initial={{
-            y: animateProps.initialY,
+            y: currentDirection === 'right' ? '100%' : '-100%',
             zIndex: 1,
           }}
           animate={{ y: '0', zIndex: 2 }}
           exit={{
-            y: animateProps.exitY,
+            y: currentDirection === 'right' ? '-100%' : '100%',
           }}
           transition={{ type: 'ease', duration: 1 }}
           style={{
