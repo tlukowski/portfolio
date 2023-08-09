@@ -12,12 +12,12 @@ export const Background = ({ currentPage, currentDirection }: currentPageProps) 
         <motion.div
           key={currentPage}
           initial={{
-            y: currentDirection === 'right' ? '100%' : '-100%',
+            y: '100%',
             zIndex: 1,
           }}
           animate={{ y: '0', zIndex: 2 }}
           exit={{
-            y: currentDirection === 'right' ? '-100%' : '100%',
+            y: '-100%',
           }}
           transition={{ type: 'ease', duration: 1 }}
           style={{
